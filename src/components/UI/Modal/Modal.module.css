@@ -13,13 +13,6 @@
 	transition: all 0.3s ease-out;
 }
 
-.List {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    width: 280px;
-}
-
 .ModalOpen {
 	animation: openModal 0.4s ease-in forwards
 }
@@ -27,6 +20,22 @@
 .ModalClosed {
 	animation: closeModal 0.4s ease-out forwards
 }
+
+.Button {
+	border: 1px solid #521751;
+	font: inherit;
+	padding: 8px;
+	background-color: #521751;
+	color: white;
+	cursor: pointer;
+}
+
+.Button:hover,
+.Button:active {
+	background-color: #fa923f;
+	cursor: pointer;
+}
+
 
 @keyframes openModal {
 	0% {
@@ -52,19 +61,4 @@
 		opacity: 0;
   transform: translateY(-100%)
 	}
-}
-
-.Button {
-	border: 1px solid #521751;
-	font: inherit;
-	padding: 8px;
-	background-color: #521751;
-	color: white;
-	cursor: pointer;
-}
-
-.Button:hover,
-.Button:active {
-	background-color: #fa923f;
-	cursor: pointer;
 }
