@@ -1,18 +1,25 @@
-import React from 'react'
-import Books from '../../Books/Books'
+import React from 'react';
+import Books from '../../Books/Books';
 
-import classes from "./Modal.module.css";
+import classes from './Modal.module.css';
 
 const modal = (props) => {
-     const cssClasses = [ classes.Modal, props.show ? classes.ModalOpen : classes.ModalClosed ];
-   
-        return ( 
-            <div  className={cssClasses.join(' ')} >
-                <Books />
-            <button onClick={props.clicked} className={classes.Button} >Έξοδος</button>
-            </div>
-         );
+	const cssClasses = [
+		classes.Modal,
+        props.show === 'entering' 
+        ? classes.ModalOpen 
+        : props.show === 'exiting' 
+        ? classes.ModalClosed : null
+	];
 
-}
- 
+	return (
+		<div className={cssClasses.join(' ')}>
+			<Books />
+			<button onClick={props.clicked} className={classes.Button}>
+				Έξοδος
+			</button>
+		</div>
+	);
+};
+
 export default modal;
