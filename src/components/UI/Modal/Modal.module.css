@@ -13,6 +13,13 @@
 	transition: all 0.3s ease-out;
 }
 
+.List {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 280px;
+}
+
 .ModalOpen {
 	animation: openModal 0.4s ease-in forwards
 }

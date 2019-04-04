@@ -21,7 +21,7 @@ class Layout extends Component {
 	render() {
 		return (
 			<div>
-				<Transition in={this.state.showModal} timeout={1000} mountOnEnter unmountOnExit >
+				<Transition in={this.state.showModal} timeout={400} mountOnEnter unmountOnExit >
 					{(state) => (<Modal show={state} clicked={this.closeModalHandler} />)}
 				</Transition>
 				<button className={classes.Button} onClick={this.showModalHandler}>
