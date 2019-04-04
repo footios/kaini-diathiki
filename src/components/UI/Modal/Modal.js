@@ -1,13 +1,13 @@
 import React from 'react'
 import Books from '../../Books/Books'
 
-import "./Modal.module.css";
+import classes from "./Modal.module.css";
 
 const modal = (props) => {
-      const classes = [ 'Modal', props.show ? 'ModalOpen' : 'ModalClosed' ];
+     const cssClasses = [ classes.Modal, props.show ? classes.ModalOpen : classes.ModalClosed ];
    
         return ( 
-            <div onClick={props.closed} className={classes.join(' ')} >
+            <div onClick={props.closed} className={cssClasses.join(' ')} >
                 <Books />
             </div>
          );
