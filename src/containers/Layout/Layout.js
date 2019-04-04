@@ -7,7 +7,8 @@ import classes from './Layout.module.css';
 
 class Layout extends Component {
 	state = {
-		showModal: false
+		showModal: false,
+		onEnteredModal: false
 	};
 
 	closeModalHandler = () => {
@@ -21,8 +22,11 @@ class Layout extends Component {
 	render() {
 		return (
 			<div>
-				<Transition in={this.state.showModal} timeout={400} mountOnEnter unmountOnExit >
-					{(state) => (<Modal show={state} clicked={this.closeModalHandler} />)}
+				<Transition in={this.state.showModal} timeout={400} mountOnEnter unmountOnExit 
+				onEntered={() => this.setState({onEntered: true})}
+				onExited={() => this.setState({onEntered: false})}
+				>
+					{(state) => (<Modal show={state} onEntered={this.state.onEntered} clicked={this.closeModalHandler} />)}
 				</Transition>
 				<button className={classes.Button} onClick={this.showModalHandler}>
 					Βιβλία Καινής Διαθήκης

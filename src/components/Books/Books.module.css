@@ -24,15 +24,15 @@
 }
 
 .fade-enter {
-    /* transition-delay: 0.7s; */
+    /* transition-delay: 1s; */
     opacity: 0;
 }
 
 
 .fade-enter-active {
     opacity: 1;
-    /* transition-delay: 0.7s; */
-    transition: opacity 1s ease-out;
+    /* transition-delay: 1s; */
+    transition: opacity 0.3s ease-out;
 }
 
 .fade-exit {

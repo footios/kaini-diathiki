@@ -1,6 +1,7 @@
 import React from 'react';
 import Books from '../../Books/Books';
 
+
 import classes from './Modal.module.css';
 
 const modal = (props) => {
@@ -11,7 +12,7 @@ const modal = (props) => {
 
 	return (
 		<div className={cssClasses.join(' ')}>
-				<Books />
+				<Books onEntered={props.onEntered} />
 				<button onClick={props.clicked} className={classes.Button}>
 					Έξοδος
 				</button>
