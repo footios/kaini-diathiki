@@ -14,13 +14,26 @@
 }
 
 .ModalOpen {
-	/* opacity: 1;
-  transform: translateY(0) */
-  display: block;
+	opacity: 1;
+  transform: translateY(0)
 }
 
 .ModalClosed {
-	/* opacity: 0;
-  transform: translateY(-100%) */
-  display: none;
+	opacity: 0;
+  transform: translateY(-100%)
+}
+
+.Button {
+	border: 1px solid #521751;
+	font: inherit;
+	padding: 8px;
+	background-color: #521751;
+	color: white;
+	cursor: pointer;
+}
+
+.Button:hover,
+.Button:active {
+	background-color: #fa923f;
+	cursor: pointer;
 }

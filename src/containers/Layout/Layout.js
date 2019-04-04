@@ -17,6 +17,7 @@ class Layout extends Component {
 	};
 
 	render() {
+		
 		return (
 			<div>
 				<Modal show={this.state.showModal} clicked={this.closeModalHandler} />
